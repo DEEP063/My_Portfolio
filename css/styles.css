@@ -320,7 +320,7 @@ img {
   margin-bottom: .8rem;
   width: 56px;
   height: 56px;
-  background-color: var(--first-color);
+  background-color: black;
   border-radius: 50%;
   overflow: hidden;
 }
