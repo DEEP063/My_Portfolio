@@ -618,8 +618,9 @@ $body-background: #353535; */
 }
 
 #social_media_heading{ 
-	height: 15vh;
+	height: auto;
 	margin: 0;
+  padding: 2em;
 	background-color: #353535;
 	font-family: "ubuntu", Arial, sans-serif;
 	overflow-x: hidden;
