@@ -599,6 +599,8 @@ img {
 /* tooltip */
 
 /* NAVBAR */
+
+
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
 
 #social_media_heading{
@@ -626,9 +628,18 @@ $body-background: #353535; */
 	overflow-x: hidden;
 	display: grid;
 	place-items: center;
-
 }
 
+@media screen and (max-width: 480px) {
+  #social_media_heading{ 
+    margin: 0;
+    padding: 1em;
+  }
+  #fitting1{
+    padding: 0.5rem;
+    width: 20rem !important;
+  }
+}
 a {
 	text-decoration: none;
 	color: #9ca0b1;
