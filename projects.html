@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Skills Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0a192f;
+            color: #fff;
+            line-height: 1.6;
+            perspective: 1000px;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a2942, #2d5a88);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .skill-category h3 {
+            color: #64ffda;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
+            perspective: 1000px;
+        }
+
+        .skill-cube {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        .skill-cube:hover {
+            transform: rotateY(180deg) rotateX(180deg);
+        }
+
+        .skill-cube-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 10px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 2px solid #64ffda;
+            backface-visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .front { transform: translateZ(50px); }
+        .back { transform: rotateY(180deg) translateZ(50px); }
+        .right { transform: rotateY(90deg) translateZ(50px); }
+        .left { transform: rotateY(-90deg) translateZ(50px); }
+        .top { transform: rotateX(90deg) translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotateY(0deg); }
+            50% { transform: translateY(-20px) rotateY(180deg); }
+            100% { transform: translateY(0px) rotateY(360deg); }
+        }
+
+        .skill-cube.animate {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            }
+
+            .skill-cube {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .glow {
+            box-shadow: 0 0 15px #64ffda;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>QA Automation Engineer</h1>
+            <p>Interactive 3D Skills Portfolio</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- <div class="skills-container"> -->
+            <div class="skill-category">
+                <h3>Testing Frameworks</h3>
+                <div class="skills-grid" id="testing-frameworks">
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">TestNG</div>
+                        <div class="skill-cube-face back">🔬</div>
+                        <div class="skill-cube-face right">Test</div>
+                        <div class="skill-cube-face left">Framework</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Java</div>
+                    </div>
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Pytest</div>
+                        <div class="skill-cube-face back">🐍</div>
+                        <div class="skill-cube-face right">Test</div>
+                        <div class="skill-cube-face left">Python</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Framework</div>
+                    </div>
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Robot Framework</div>
+                        <div class="skill-cube-face back">🤖</div>
+                        <div class="skill-cube-face right">Robot</div>
+                        <div class="skill-cube-face left">Auto</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Test</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Project Management</h3>
+                <div class="skills-grid" id="project-management">
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Jira</div>
+                        <div class="skill-cube-face back">📋</div>
+                        <div class="skill-cube-face right">Track</div>
+                        <div class="skill-cube-face left">Manage</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Agile</div>
+                    </div>
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Azure DevOps</div>
+                        <div class="skill-cube-face back">☁️</div>
+                        <div class="skill-cube-face right">Azure</div>
+                        <div class="skill-cube-face left">DevOps</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">MS</div>
+                    </div>
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">TestRail</div>
+                        <div class="skill-cube-face back">📊</div>
+                        <div class="skill-cube-face right">Test</div>
+                        <div class="skill-cube-face left">Cases</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Manage</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Performance Testing</h3>
+                <div class="skills-grid" id="performance">
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">JMeter</div>
+                        <div class="skill-cube-face back">⚡</div>
+                        <div class="skill-cube-face right">Load</div>
+                        <div class="skill-cube-face left">Test</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Apache</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+                <div class="skill-category">
+                    <h3>Automation Frameworks</h3>
+                    <div class="skills-grid" id="automation-frameworks">
+                        <div class="skill-cube">
+                            <div class="skill-cube-face front">Data-driven Framework</div>
+                            <div class="skill-cube-face back">📊</div>
+                            <div class="skill-cube-face right">Data-Driven</div>
+                            <div class="skill-cube-face left">Framework</div>
+                            <div class="skill-cube-face top">⭐</div>
+                            <div class="skill-cube-face bottom">Automation</div>
+                        </div>
+                        <div class="skill-cube">
+                            <div class="skill-cube-face front">Page Object Model (POM)</div>
+                            <div class="skill-cube-face back">📄</div>
+                            <div class="skill-cube-face right">POM</div>
+                            <div class="skill-cube-face left">Design</div>
+                            <div class="skill-cube-face top">⭐</div>
+                            <div class="skill-cube-face bottom">Pattern</div>
+                        </div>
+                        <div class="skill-cube">
+                            <div class="skill-cube-face front">Behavior-driven Development</div>
+                            <div class="skill-cube-face back">🔍</div>
+                            <div class="skill-cube-face right">BDD</div>
+                            <div class="skill-cube-face left">Frameworks</div>
+                            <div class="skill-cube-face top">⭐</div>
+                            <div class="skill-cube-face bottom">Testing</div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="skill-category">
+                    <h3>API Testing</h3>
+                    <div class="skills-grid" id="api-testing">
+                        <div class="skill-cube">
+                            <div class="skill-cube-face front">HttpClient</div>
+                            <div class="skill-cube-face back">🌐</div>
+                            <div class="skill-cube-face right">Client</div>
+                            <div class="skill-cube-face left">HTTP</div>
+                            <div class="skill-cube-face top">⭐</div>
+                            <div class="skill-cube-face bottom">Testing</div>
+                        </div>
+                        <div class="skill-cube">
+                            <div class="skill-cube-face front">Swagger</div>
+                            <div class="skill-cube-face back">📜</div>
+                            <div class="skill-cube-face right">API</div>
+                            <div class="skill-cube-face left">Documentation</div>
+                            <div class="skill-cube-face top">⭐</div>
+                            <div class="skill-cube-face bottom">Tool</div>
+                        </div>
+                        <div class="skill
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skills-grid" id="programming">
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Python</div>
+                        <div class="skill-cube-face back">🐍</div>
+                        <div class="skill-cube-face right">Py</div>
+                        <div class="skill-cube-face left">Python</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Python</div>
+                    </div>
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">C#</div>
+                        <div class="skill-cube-face back">📱</div>
+                        <div class="skill-cube-face right">C#</div>
+                        <div class="skill-cube-face left">C#</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">C#</div>
+                    </div>
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Java</div>
+                        <div class="skill-cube-face back">☕</div>
+                        <div class="skill-cube-face right">Java</div>
+                        <div class="skill-cube-face left">Java</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Java</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Automation Tools</h3>
+                <div class="skills-grid" id="automation">
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Selenium</div>
+                        <div class="skill-cube-face back">🤖</div>
+                        <div class="skill-cube-face right">Se</div>
+                        <div class="skill-cube-face left">Web</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Auto</div>
+                    </div>
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Appium</div>
+                        <div class="skill-cube-face back">📱</div>
+                        <div class="skill-cube-face right">App</div>
+                        <div class="skill-cube-face left">Mobile</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Test</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>CI/CD & VCS</h3>
+                <div class="skills-grid" id="cicd">
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Jenkins</div>
+                        <div class="skill-cube-face back">⚙️</div>
+                        <div class="skill-cube-face right">CI</div>
+                        <div class="skill-cube-face left">CD</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Auto</div>
+                    </div>
+                    <div class="skill-cube">
+                        <div class="skill-cube-face front">Git</div>
+                        <div class="skill-cube-face back">📦</div>
+                        <div class="skill-cube-face right">VCS</div>
+                        <div class="skill-cube-face left">Code</div>
+                        <div class="skill-cube-face top">⭐</div>
+                        <div class="skill-cube-face bottom">Control</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Animation for cube entrance
+        function animateEntrance() {
+            const cubes = document.querySelectorAll('.skill-cube');
+            cubes.forEach((cube, index) => {
+                setTimeout(() => {
+                    cube.style.opacity = '1';
+                    cube.classList.add('animate');
+                }, index * 200);
+            });
+        }
+
+        // Intersection Observer for triggering animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const cubes = entry.target.querySelectorAll('.skill-cube');
+                    cubes.forEach((cube, index) => {
+                        setTimeout(() => {
+                            cube.style.opacity = '1';
+                            cube.classList.add('animate');
+                        }, index * 200);
+                    });
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe all skill categories
+        document.querySelectorAll('.skill-category').forEach(category => {
+            observer.observe(category);
+        });
+
+        // Add hover glow effect
+        document.querySelectorAll('.skill-cube').forEach(cube => {
+            cube.addEventListener('mouseenter', () => {
+                cube.querySelectorAll('.skill-cube-face').forEach(face => {
+                    face.classList.add('glow');
+                });
+            });
+
+            cube.addEventListener('mouseleave', () => {
+                cube.querySelectorAll('.skill-cube-face').forEach(face => {
+                    face.classList.remove('glow');
+                });
+            });
+
+            // Initially set opacity to 0
+            cube.style.opacity = '0';
+        });
+
+        // Random rotation on click
+        document.querySelectorAll('.skill-cube').forEach(cube => {
+            cube.addEventListener('click', () => {
+                const randomX = Math.random() * 360;
+                const randomY = Math.random() * 360;
+                cube.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg)`;
+            });
+        });
+
+        // Initial animation
+        window.addEventListener('load', animateEntrance);
+    </script>
+</body>
+</html>
