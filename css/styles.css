@@ -1073,6 +1073,14 @@ a {
   backdrop-filter: blur(10px);
   transform: rotate(calc(var(--r) * 1deg));
 }
+@media screen and (max-width: 480px) {
+  .github_container .glass {
+    position: relative;
+    width: 140px;
+    height: 180 0px;
+  }
+}
+
 
 .github_container:hover .glass {
   transform: rotate(0deg);
