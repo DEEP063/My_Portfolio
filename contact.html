@@ -1,180 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        /* From Uiverse.io by bociKond */ 
-.load_rrr {
-  width: 44.8px;
-  height: 44.8px;
-  color: #554cb5;
-  position: relative;
-  background: radial-gradient(11.2px,currentColor 94%,#0000);
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card {
+      width: 180px;
+      height: min-content;
+      transition: all .3s;
+      position: relative;
+      border-radius: .5rem 2rem;
+      box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.5);
+    }
 
-.load_rrr:before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: radial-gradient(10.08px at bottom right,#0000 94%,currentColor) top    left,
-          radial-gradient(10.08px at bottom left ,#0000 94%,currentColor) top    right,
-          radial-gradient(10.08px at top    right,#0000 94%,currentColor) bottom left,
-          radial-gradient(10.08px at top    left ,#0000 94%,currentColor) bottom right;
-  background-size: 22.4px 22.4px;
-  background-repeat: no-repeat;
-  animation: loader 1.5s infinite cubic-bezier(0.3,1,0,1);
-}
+    .card:hover {
+      transform: scale(1.03);
+    }
 
-@keyframes load_rrr {
-  33% {
-    inset: -11.2px;
-    transform: rotate(0deg);
-  }
+    .img {
+      transition: all .3s;
+      background: #ff0084;
+      background: -webkit-linear-gradient(to right, #33001b, #ff0084);
+      background: linear-gradient(to right, #33001b, #ff0084);
+      width: 100%;
+    }
 
-  66% {
-    inset: -11.2px;
-    transform: rotate(90deg);
-  }
+    .img:hover {
+      transform: scale(1.3);
+    }
 
-  100% {
-    inset: 0;
-    transform: rotate(90deg);
-  }
-}
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    .img-container {
+      display: grid;
+      border-radius: .5rem 2rem;
+      height: 140px;
+      overflow: hidden;
+    }
+
+    .description {
+      position: absolute;
+      bottom: .5rem;
+      left: .5rem;
+      text-align: start;
+      padding: .5rem 1em;
+      width: 70%;
+      transition: all 0.5s ease;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      backdrop-filter: blur(.1rem);
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: .5rem 2rem;
+    }
+
+    .description:hover {
+      transform: perspective(100px) translateX(7px) rotateX(3deg) rotateY(3deg) scale(1);
+      box-shadow: none;
+    }
+
+    .title {
+      color: aliceblue;
+    }
+  </style>
 </head>
 <body>
-    <div class="load_rrr"></div>
+  /* From Uiverse.io by FrM-bot */ 
+<div class="card">
+    <div class="img-container">
+        <div class="img">
+          <img src="./img/Python.jpg" alt="">
+        </div>
+        <div class="description card">
+            <span class="title">
+                Card
+            </span>
+        </div>
+    </div>
+</div>
 </body>
 </html>
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* From Uiverse.io by Nawsome */ 
-.loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  width: 160px;
-  height: 100px;
-  margin-left: -80px;
-  margin-top: -50px;
-  border-radius: 5px;
-  background: #1e3f57;
-  animation: dot1_ 3s cubic-bezier(0.55,0.3,0.24,0.99) infinite;
-}
-
-.loader:nth-child(2) {
-  z-index: 11;
-  width: 150px;
-  height: 90px;
-  margin-top: -45px;
-  margin-left: -75px;
-  border-radius: 3px;
-  background: #3c517d;
-  animation-name: dot2_;
-}
-
-.loader:nth-child(3) {
-  z-index: 12;
-  width: 40px;
-  height: 20px;
-  margin-top: 50px;
-  margin-left: -20px;
-  border-radius: 0 0 5px 5px;
-  background: #6bb2cd;
-  animation-name: dot3_;
-}
-
-@keyframes dot1_ {
-  3%,97% {
-    width: 160px;
-    height: 100px;
-    margin-top: -50px;
-    margin-left: -80px;
-  }
-
-  30%,36% {
-    width: 80px;
-    height: 120px;
-    margin-top: -60px;
-    margin-left: -40px;
-  }
-
-  63%,69% {
-    width: 40px;
-    height: 80px;
-    margin-top: -40px;
-    margin-left: -20px;
-  }
-}
-
-@keyframes dot2_ {
-  3%,97% {
-    height: 90px;
-    width: 150px;
-    margin-left: -75px;
-    margin-top: -45px;
-  }
-
-  30%,36% {
-    width: 70px;
-    height: 96px;
-    margin-left: -35px;
-    margin-top: -48px;
-  }
-
-  63%,69% {
-    width: 32px;
-    height: 60px;
-    margin-left: -16px;
-    margin-top: -30px;
-  }
-}
-
-@keyframes dot3_ {
-  3%,97% {
-    height: 20px;
-    width: 40px;
-    margin-left: -20px;
-    margin-top: 50px;
-  }
-
-  30%,36% {
-    width: 8px;
-    height: 8px;
-    margin-left: -5px;
-    margin-top: 49px;
-    border-radius: 8px;
-  }
-
-  63%,69% {
-    width: 16px;
-    height: 4px;
-    margin-left: -8px;
-    margin-top: -37px;
-    border-radius: 10px;
-  }
-}
-    </style>
-</head>
-<body>
-    /* From Uiverse.io by Nawsome */ 
-<div class="container">
-	<div class="loader"></div>
-	<div class="loader"></div>
-	<div class="loader"></div>
-</div>
-
-</body>
-</html> -->
