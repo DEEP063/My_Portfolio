@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- CONTACT_FORM -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+        publicKey: "H79fGGyYI8xePmpZ5",
+    });
+    })();
+    </script>
+    <!-- CONTACT_FORM -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+CL:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+    <!-- LOADER -->
+    <div id="loader1">
+        <div class="loader">  
+            <svg viewBox="0 0 80 80">
+              <circle r="32" cy="40" cx="40" id="test"></circle>
+            </svg>
+          </div>
+          
+          <div class="loader triangle">
+            <svg viewBox="0 0 86 80">
+              <polygon points="43 8 79 72 7 72"></polygon>
+            </svg>
+          </div>
+          
+          <div class="loader">
+            <svg viewBox="0 0 80 80">
+              <rect height="64" width="64" y="8" x="8"></rect>
+            </svg>
+          </div>
+    </div>
+    <!-- LOADER -->
+
+    <div  style="display:none;" id="myDiv" class="animate-bottom">
+        <header class="header">
+            <a href="#" class="header__logo">Deepak Kona</a>
+
+            <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+            <nav class="nav" id="nav-menu">
+                <div class="nav__content bd-grid">
+
+                    <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+    
+                    <div class="nav__perfil">
+                        <div class="nav__img">
+                            <img src="img/p2.png" alt="image">
+                        </div>
+                        
+                        <div>
+                            <a href="#" class="nav__name">Deepak Kona</a>
+                            <span class="nav__profesion">QA Automation Engineer</span>
+                        </div>
+                    </div>
+    
+                    <div class="nav__menu">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Skills</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="nav__social">
+                        <a class="tooltip-container" class="nav__social-icon">
+                            <span class="text">
+                             <div class="rotating-element">🌟</div>   
+                            </span>         
+                            <span>Hello! 👋🏻</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header> 
+        <main>
+            <!-- <section>
+              
+                <h1>Welcome to My Portfolio</h1>
+                <p>I am a QA Automation Engineer.</p>
+            </section> -->
+
+            <!-- POSTER -->
+            <div id="poster">
+              
+              <div class="container">
+                <div class="content">
+                    <h1>I am SDET Engineer</h1>
+                    <p>An SDET (Software Development Engineer in Test) combines software development and testing expertise to build robust automation frameworks and ensure seamless integration and performance of applications.</p>
+                </div>
+                <div class="image">
+                    <img src="img/preview.webp" alt="QA Automation Image">
+                </div>
+              </div>
+            </div>
+        </main>
+        <div id="android">
+          <div class="container_container">
+            <div class="loader_loader"></div>
+            <div class="loader_loader"></div>
+            <div class="loader_loader"></div>
+            
+          </div>
+          <h3>
+            I am a SDET engineer with expertise in testing for web, Android, and iPad platforms. My goal is to create automated solutions that guarantee exceptional quality in software products.
+          </h3>
+        </div>
+        
+
+
+
+        <!-- SOCIAL_PLATFORM -->
+        
+        <div id="social_media_heading">
+          <div class="wrapper">
+            <h1>Social Platform</h1>
+          </div>
+        
+
+         <div id="social_format">
+            <div id="fitting1">
+                <div id="fitting2">
+                    <div class="main1">
+                        <div class="up">
+                          
+                          <a href="https://wa.me/qr/WBJ2FDALARSCA1" target="_blank">
+                            <button class="card1">
+                              <svg
+                                class="whatsapp"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                height="30"
+                                width="30"
+                              >
+                                <path
+                                  d="M19.001 4.908A9.817 9.817 0 0 0 11.992 2C6.534 2 2.085 6.448 2.08 11.908c0 1.748.458 3.45 1.321 4.956L2 22l5.255-1.377a9.916 9.916 0 0 0 4.737 1.206h.005c5.46 0 9.908-4.448 9.913-9.913A9.872 9.872 0 0 0 19 4.908h.001ZM11.992 20.15A8.216 8.216 0 0 1 7.797 19l-.3-.18-3.117.818.833-3.041-.196-.314a8.2 8.2 0 0 1-1.258-4.381c0-4.533 3.696-8.23 8.239-8.23a8.2 8.2 0 0 1 5.825 2.413 8.196 8.196 0 0 1 2.41 5.825c-.006 4.55-3.702 8.24-8.24 8.24Zm4.52-6.167c-.247-.124-1.463-.723-1.692-.808-.228-.08-.394-.123-.556.124-.166.246-.641.808-.784.969-.143.166-.29.185-.537.062-.247-.125-1.045-.385-1.99-1.23-.738-.657-1.232-1.47-1.38-1.716-.142-.247-.013-.38.11-.504.11-.11.247-.29.37-.432.126-.143.167-.248.248-.413.082-.167.043-.31-.018-.433-.063-.124-.557-1.345-.765-1.838-.2-.486-.404-.419-.557-.425-.142-.009-.309-.009-.475-.009a.911.911 0 0 0-.661.31c-.228.247-.864.845-.864 2.067 0 1.22.888 2.395 1.013 2.56.122.167 1.742 2.666 4.229 3.74.587.257 1.05.408 1.41.523.595.19 1.13.162 1.558.1.475-.072 1.464-.6 1.673-1.178.205-.58.205-1.075.142-1.18-.061-.104-.227-.165-.475-.29Z"
+                                ></path>
+                              </svg>
+                            </button>
+                          </a>
+                          
+                          <a href="https://www.linkedin.com/in/deepakkona" target="_blank">
+                            <button class="card2">
+                            
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="linkedin"
+                              height="1.6em"
+                              viewBox="0 0 448 512"
+                            >
+                              <path
+                                d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+                              ></path>
+                            </svg>
+                          </button></a>
+                          
+                        </div>
+                        <div class="down">
+                          
+                          <a href="https://github.com/DEEP063" target="_blank">
+                            <button class="card3">
+                              <svg
+                                class="github"
+                                height="30px"
+                                width="30px"
+                                viewBox="0 0 30 30"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+                                ></path>
+                              </svg>
+                            </button>
+                          </a>
+
+                          
+                          <a href="https://discordapp.com/users/erdeepak$1" target="_blank">
+                            <button class="card4">
+                              <svg
+                                class="discord"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 48 48"
+                                width="30px"
+                                height="30px"
+                              >
+                                <path
+                                  d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z"
+                                ></path>
+                              </svg>
+                            </button>
+                          </a>
+                        
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+            
+         </div>
+        </div>
+        <!-- SOCIAL_PLATFORM --> 
+
+        <!-- GITHUB_CARDS -->
+        <div id="github_upper_div">
+          <div class="github_container" >
+              <a href="https://github.com/DEEP063" target="_blank">
+              <div data-text="Github" style="--r:-15;" class="glass">
+                  <svg viewBox="0 0 496 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                  ></path>
+                  </svg>
+              </div>
+              </a>
+              <a href="https://github.com/DEEP063" target="_blank">
+              <div data-text="Code" style="--r:5;" class="glass">
+                  <svg viewBox="0 0 640 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"
+                  ></path>
+                  </svg>
+              </div>
+              </a>
+              <a href="https://github.com/DEEP063" target="_blank">
+              <div data-text="Learn" style="--r:25;" class="glass">
+                  <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zm64 320H64V320c35.3 0 64 28.7 64 64zM64 192V128h64c0 35.3-28.7 64-64 64zM448 384c0-35.3 28.7-64 64-64v64H448zm64-192c-35.3 0-64-28.7-64-64h64v64zM288 160a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"
+                  ></path>
+                  </svg>
+              </div>
+              </a>
+              </div>
+       </div>
+        <!-- GITHUB_CARDS -->
+
+
+        <!-- CONTACT_FORM -->
+        <div id="cont">
+          <div class="form-container" id="contact-form">
+            <form class="form">
+              <div class="form-group">
+                <label for="name">Name </label>
+                <input required="" name="name" id="name" type="text">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject </label>
+                <input required="" name="subject" id="subject" type="text">
+              </div>
+              <div class="form-group">
+                <label for="textarea">Message </label>
+                <textarea required="" cols="50" rows="10" id="message" name="textarea"></textarea>
+              </div>
+              <button type="submit" class="form-submit-btn" >Submit</button>
+            </form>          
+          </div>
+        </div>
+
+        
+        <!-- CONTACT_FORM -->
+          
+
+        
+        <footer>
+            <p>&copy; 2024 Your Name</p>
+        </footer>
+        
+    </div> 
+    
+    <script src="js/scripts.js"></script>
+        <!-- ===== IONICONS ===== -->
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+        <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
